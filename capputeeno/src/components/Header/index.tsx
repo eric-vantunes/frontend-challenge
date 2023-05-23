@@ -1,6 +1,7 @@
 'use client';
+import { useFilter } from "@/hooks/useFilter";
 import { CartControl } from "../Cart";
-import { PrimaryInputWSearchIcon } from "../primary-input";
+import { PrimaryInputWSearchIcon} from "../primary-input";
 import { TagHeader, Logo } from "./styles";
 import { Saira_Stencil_One } from "next/font/google";
 
@@ -14,12 +15,16 @@ interface HeaderProps {
 
 }
 
-export function Header() {
+export function Header(props : HeaderProps) {
+  const {setSearch, search} = useFilter();
   return (
     <TagHeader>
       <Logo className={sairaStencil.className}>Capputeeno</Logo>
       <div>
-        <PrimaryInputWSearchIcon placeholder="Procurando por algo específico?"/>
+        <PrimaryInputWSearchIcon
+          value={search}
+          handleChange={setSearch} 
+          placeholder="Procurando por algo específico?"/>
         <CartControl/>
       </div>
     </TagHeader>
