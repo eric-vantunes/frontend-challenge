@@ -10,7 +10,6 @@ const sairaStencil = Saira_Stencil_One({
   subsets: ['latin']
 })
 
-
 interface HeaderProps {
 
 }
