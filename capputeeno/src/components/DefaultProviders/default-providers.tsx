@@ -13,7 +13,7 @@ const theme = {
   tabletBreakpoint: "768px"
 }
 
-export default function DefaultProviders({children} : DefaultProvidersProps) {
+export function DefaultProviders({children} : DefaultProvidersProps) {
   const client = new QueryClient();
   return (
     <QueryClientProvider client={client}>
