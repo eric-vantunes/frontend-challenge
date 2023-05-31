@@ -7,6 +7,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
   border-radius: 0px 0px 4px 4px;
   backdrop-filter: blur(10px);
 
